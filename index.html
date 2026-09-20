@@ -3,186 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZENTRITH WORLD</title>
+    <title>Zentrith World</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
-
-        /* ---------------- PANTALLA DE CARGA ---------------- */
-        .pantalla-carga {
-            width: 100vw;
-            height: 100vh;
-            background: linear-gradient(180deg, #0A1440 0%, #5A2080 45%, #FF6B2C 100%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: fixed;
-            top: 0; left: 0;
-            z-index: 1000;
-            color: white;
-        }
-        .estrellas {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-        .estrella {
-            position: absolute;
-            background: white;
-            border-radius: 50%;
-            animation: parpadear 2s infinite alternate;
-        }
-        @keyframes parpadear {
-            0% { opacity: 0.3; }
-            100% { opacity: 1; }
-        }
-        .logo-z {
-            font-size: 180px;
-            font-weight: bold;
-            text-shadow: 0 0 30px #A0C4FF, 0 0 60px #6094FF;
-            margin-bottom: 20px;
-        }
-        .titulo {
-            font-size: 42px;
-            letter-spacing: 4px;
-            text-shadow: 0 0 15px rgba(255,255,255,0.5);
-            margin-bottom: 60px;
-        }
-        .barra-contenedor {
-            width: 80%;
-            max-width: 500px;
-            height: 16px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 8px;
-            overflow: hidden;
-            margin-bottom: 25px;
-        }
-        .barra-progreso {
-            width: 0%;
-            height: 100%;
-            background: linear-gradient(90deg, #FFD029, #9D4EDD, #3A86FF);
-            border-radius: 8px;
-            animation: cargar 3s forwards;
-        }
-        @keyframes cargar {
-            0% { width: 0%; }
-            100% { width: 70%; }
-        }
-        .texto-carga {
-            font-size: 22px;
-            opacity: 0.85;
-        }
-
-        /* ---------------- MENÚ PRINCIPAL ---------------- */
-        .menu-principal {
-            display: none;
-            width: 100vw;
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body {
+            background-color: #000000;
             min-height: 100vh;
-            background: linear-gradient(180deg, #102060 0%, #4A1A70 50%, #E85A20 100%);
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 40px 20px;
-            color: white;
-        }
-        .menu-titulo {
-            font-size: 52px;
-            text-shadow: 0 0 20px #FFD700;
-            margin-bottom: 10px;
-        }
-        .menu-sub {
-            font-size: 22px;
-            margin-bottom: 50px;
-            opacity: 0.9;
-        }
-        .btn {
-            width: 90%;
-            max-width: 400px;
-            padding: 18px;
-            font-size: 22px;
-            font-weight: bold;
-            border: none;
-            border-radius: 14px;
-            margin: 10px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        .btn-empezar {
-            background: linear-gradient(135deg, #FFD029, #FF6B2C);
-            color: #1A1A2E;
-        }
-        .btn-empezar:hover { transform: scale(1.05); box-shadow: 0 0 25px #FFD029; }
-        .btn-como {
-            background: linear-gradient(135deg, #4CC9F0, #4361EE);
-            color: white;
-        }
-        .btn-como:hover { transform: scale(1.05); box-shadow: 0 0 25px #4361EE; }
-
-        /* ---------------- PANTALLAS GENERALES ---------------- */
-        .pantalla {
-            display: none;
-            min-height: 100vh;
+            color: #ffffff;
             padding: 30px 20px;
-            color: white;
         }
-        .activa { display: flex; }
-        .oculto { display: none !important; }
+        .contenido {
+            max-width: 750px;
+            margin: 0 auto 60px;
+            background-color: #111111;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #00ffc8;
+        }
+        .contenido p {
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+            color: #e0f0ff;
+        }
+        .aviso {
+            text-align: center;
+            color: #aaffff;
+            font-size: 1.2rem;
+            margin-bottom: 50px;
+        }
+        .boton {
+            text-align: center;
+        }
+        button {
+            background-color: #00e060;
+            color: white;
+            font-size: 2.4rem;
+            font-weight: bold;
+            padding: 20px 60px;
+            border: 3px solid #00ffaa;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 550px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-
-    <!-- PANTALLA DE INICIO IGUAL A TU DISEÑO -->
-    <div class="pantalla-carga" id="pantallaCarga">
-        <div class="estrellas" id="estrellas"></div>
-        <div class="logo-z">Z</div>
-        <h1 class="titulo">ZENTRITH WORLD</h1>
-        <div class="barra-contenedor">
-            <div class="barra-progreso"></div>
-        </div>
-        <p class="texto-carga">Iniciando sistemas seguros...</p>
+    <div class="contenido">
+        <p>✅ <strong>Libertad con respeto:</strong> Expresate libremente, sin censura absurda —pero siempre con límites contra el daño.</p>
+        <p>✅ <strong>Cero discriminación:</strong> Todos valen igual. Nunca ataques por color de piel ni apariencia.</p>
+        <p>✅ <strong>Críticas válidas:</strong> Si ves algo que falla, decilo con educación —lo arreglamos juntos.</p>
+        <p>❌ <strong>No permitimos:</strong> Odio, mentiras, agresiones ni falsedades.</p>
+        <p>🔒 <strong>Control total:</strong> Zentrith World cuida su espacio: quien daña, queda bloqueado.</p>
     </div>
 
-    <!-- MENÚ PRINCIPAL -->
-    <div class="menu-principal" id="menuPrincipal">
-        <h1 class="menu-titulo">✨ ZENTRITH WORLD ✨</h1>
-        <p class="menu-sub">¡Tu mundo mágico de aventuras!</p>
-        <button class="btn btn-empezar" onclick="irAJugar()">▶️ Empezar a jugar</button>
-        <button class="btn btn-como" onclick="mostrarInfo()">📖 ¿Cómo se juega?</button>
+    <div class="aviso">📜 Deslizá hacia abajo ⬇️</div>
+
+    <div class="boton">
+        <button>INSTALÁMELO</button>
     </div>
 
-    <!-- ACA PONES EL RESTO DE PANTALLAS: INSTRUCCIONES, JUEGO, ETC -->
-
-
-    <script>
-        // CREAMOS LAS ESTRELLITAS IGUAL QUE EN TU IMAGEN
-        const contenedorEstrellas = document.getElementById('estrellas');
-        for(let i=0; i<80; i++){
-            const estrella = document.createElement('div');
-            estrella.classList.add('estrella');
-            estrella.style.left = Math.random()*100 + '%';
-            estrella.style.top = Math.random()*100 + '%';
-            estrella.style.width = (Math.random()*3 +1) + 'px';
-            estrella.style.height = estrella.style.width;
-            estrella.style.animationDelay = Math.random()*2 + 's';
-            contenedorEstrellas.appendChild(estrella);
-        }
-
-        // DESPUÉS DE 3 SEGUNDOS CAMBIA A MENÚ
-        setTimeout(() => {
-            document.getElementById('pantallaCarga').classList.add('oculto');
-            document.getElementById('menuPrincipal').classList.add('activa');
-        }, 3200);
-
-
-        // FUNCIONES DEL MENÚ
-        function irAJugar(){
-            alert('¡Aquí empieza tu aventura! 🚀 (Acá ponemos el juego completo)');
-        }
-        function mostrarInfo(){
-            alert('✨ Explorá, recolectá cosas lindas y conocé amigos! 🐱⭐');
-        }
-    </script>
-
+    <!-- 🎵 AUDIO: Acá agregás tu música nueva cuando la tengas -->
+    <!-- <audio src="tu-musica.mp3" autoplay loop> -->
 </body>
 </html>
